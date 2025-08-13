@@ -1,0 +1,406 @@
+/* Tema dark globale */
+.stApp {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Sidebar dark */
+[data-testid="stSidebar"] {
+    background-color: #1a1a1a;
+    border-right: 1px solid #333;
+}
+
+/* Titoli e intestazioni */
+.main-header {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0;
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #0d6efd;
+    margin-bottom: 1.5rem;
+}
+.subheader { /* Classe non usata, ma st.subheader sì */
+    color: #cccccc;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+
+/* Cards e contenitori */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    background-color: #1e1e1e;
+    margin-bottom: 1rem;
+    color: #e0e0e0;
+    border: 1px solid #333;
+}
+.result-container {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    margin-top: 1rem; /* Ridotto leggermente */
+    color: #e0e0e0;
+    border: 1px solid #333;
+}
+.filter-group {
+    background-color: #252525;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: #e0e0e0;
+    border: 1px solid #333;
+}
+
+/* Pulsanti e interazioni */
+.stButton>button {
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s;
+    border: none;
+}
+.stButton>button:hover {
+    background-color: #0b5ed7;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.stDownloadButton>button { /* Stile anche per i download button */
+    background-color: #198754; /* Verde per download */
+    color: white;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s;
+    border: none;
+}
+.stDownloadButton>button:hover {
+    background-color: #157347;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+
+/* Tag colorati (usati da CSS per Opportunity_Class nella tabella) */
+.success-tag { /* Classe non usata direttamente nel Python, ma lo stile è qui se serve */
+    background-color: #198754;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+.warning-tag {
+    background-color: #fd7e14;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+.danger-tag {
+    background-color: #dc3545;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+
+/* Input e form controls */
+.stTextInput>div>div>input, 
+.stSelectbox>div>div>div, /* Attenzione: questo potrebbe essere troppo generico */
+.stNumberInput>div>div>input {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    border-radius: 4px; /* Aggiunto per coerenza */
+}
+/* Target più specifico per il div che contiene il valore selezionato in stSelectbox */
+[data-baseweb="select"] > div:first-child {
+    background-color: #333 !important; 
+    color: #e0e0e0 !important;
+    border: 1px solid #444 !important;
+    border-radius: 4px !important;
+}
+/* Stile per le opzioni del dropdown */
+[data-baseweb="popover"] ul li {
+    background-color: #333 !important;
+    color: #e0e0e0 !important;
+}
+[data-baseweb="popover"] ul li:hover {
+    background-color: #444 !important;
+}
+
+
+.stTextInput>label, .stSelectbox>label, .stNumberInput>label, .stSlider>label, .stCheckbox>label {
+    color: #cccccc !important;
+}
+
+/* Slider */
+.stSlider>div[data-testid="stTickBar"]>div { /* Tick bar */
+    background-color: #444; /* Sfondo della barra */
+}
+.stSlider>div>div>div>div[role="slider"] { /* Maniglia slider */
+    background-color: #0d6efd; /* Colore della maniglia */
+    border: 2px solid #0d6efd;
+}
+.stSlider>div>div:nth-child(2)>div { /* Barra riempita */
+    background-color: #0d6efd;
+}
+
+
+/* Testo generale */
+p, span, div, td, th, label { /* Rimosso !important da div, troppo generico */
+    color: #e0e0e0; 
+}
+th, td { /* Assicura che le tabelle non ereditino !important se non necessario */
+    color: #e0e0e0 !important; /* Mantenuto per tabelle per sovrascrivere default Streamlit */
+}
+
+
+/* Links */
+a {
+    color: #0d6efd !important;
+}
+a:hover {
+    color: #0b5ed7 !important;
+    text-decoration: underline;
+}
+
+/* Schede (Tabs) */
+.stTabs [data-baseweb="tab-panel"] {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 0 0 10px 10px;
+    color: #e0e0e0;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+.stTabs [data-baseweb="tab"] {
+    background-color: #252525;
+    color: #cccccc;
+    border-radius: 5px 5px 0 0;
+    margin-right: 2px;
+    border: 1px solid #333;
+    border-bottom: none; /* Evita doppio bordo quando non selezionato */
+}
+.stTabs [aria-selected="true"] {
+    background-color: #1e1e1e;
+    border-top: 3px solid #0d6efd; /* Bordo più evidente */
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+    border-bottom: none; /* Il contenuto ha il bordo inferiore */
+    color: #e0e0e0;
+}
+
+/* DataFrames e tabelle */
+.stDataFrame, .stTable { /* Applicato anche a st.table se usato */
+    border: 1px solid #333;
+    border-radius: 6px; /* Angoli arrotondati */
+    overflow: hidden; /* Per far rispettare il border-radius ai figli */
+}
+.stDataFrame th, .stTable th {
+    background-color: #252525 !important;
+    color: #e0e0e0 !important;
+    border-bottom: 1px solid #444 !important;
+}
+.stDataFrame td, .stTable td {
+    color: #e0e0e0 !important;
+    background-color: #1e1e1e !important;
+    border-bottom: 1px solid #333 !important;
+}
+/* Per il testo "index" del dataframe se visibile */
+.stDataFrame .col_heading, .stDataFrame .row_heading {
+     color: #aaaaaa !important;
+     background-color: #252525 !important;
+}
+
+
+/* Area di testo e input multilinea */
+.stTextArea>div>div>textarea {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    border-radius: 4px;
+}
+
+/* Metriche */
+[data-testid="stMetricValue"] {
+    /* background-color: #252525; Colore già ereditato */
+    color: #e0e0e0 !important;
+    /* padding: 10px;
+    border-radius: 5px; */ /* Stile più minimalista, si integra meglio */
+    font-weight: bold;
+    /* border: 1px solid #333; */
+}
+[data-testid="stMetricLabel"] {
+    color: #aaaaaa !important;
+}
+[data-testid="stMetricDelta"] {
+    color: #0d6efd !important; /* O usare colori specifici per up/down */
+}
+[data-testid="stMetricDelta"] .stArrowIcon { /* Freccia del delta */
+    stroke: #0d6efd !important; 
+}
+[data-testid="stMetric"] { /* Contenitore della metrica */
+    background-color: #252525;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+
+/* Expander */
+.streamlit-expanderHeader {
+    background-color: #252525 !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #333 !important;
+    border-radius: 5px; /* Arrotonda anche l'header */
+}
+.streamlit-expanderContent {
+    background-color: #1e1e1e !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #333 !important;
+    border-top: none !important; /* Evita doppio bordo con header */
+    border-radius: 0 0 5px 5px; /* Arrotonda angoli inferiori */
+}
+
+/* File uploader */
+[data-testid="stFileUploader"] {
+    background-color: #252525 !important;
+    border: 1px dashed #444 !important;
+    border-radius: 6px;
+}
+[data-testid="stFileUploader"] label div { /* Testo "Drag and drop file here" */
+    color: #cccccc !important;
+}
+[data-testid="stFileUploader"] ul { /* Lista dei file caricati */
+    color: #e0e0e0 !important;
+}
+
+
+/* Divisori */
+hr {
+    border-color: #333 !important;
+}
+
+/* Button personalizzato per copia ASIN */
+.copy-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    width: 100%;
+}
+
+.copy-button:hover {
+    background-color: #0b5ed7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+}
+
+.copy-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.copy-button svg {
+    margin-right: 8px;
+}
+
+/* Notifica di copia */
+#copy-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #198754; /* Verde successo */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    z-index: 10000; /* Alto z-index */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Aggiunto transform per animazione */
+    pointer-events: none;
+    transform: translateY(-20px); /* Parte da sopra */
+}
+
+#copy-notification.show-notification {
+    opacity: 1 !important;
+    transform: translateY(0); /* Scende in posizione */
+}
+
+/* Shipping calculator card (usato in sidebar) */
+.shipping-card {
+    background-color: #252525;
+    border-radius: 8px;
+    padding: 15px;
+    border: 1px solid #444;
+    margin-bottom: 15px;
+}
+
+.shipping-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+}
+
+/* Miglioramento checkbox */
+.stCheckbox {
+    padding: 5px 0;
+}
+.stCheckbox>label>div { /* Stile per il box del checkbox */
+   border-color: #555 !important;
+}
+.stCheckbox>label:hover>div {
+    border-color: #0d6efd !important;
+}
+
+/* Miglioramento st.info, st.warning, st.error */
+[data-testid="stNotification"] {
+    border-radius: 6px;
+    border-width: 1px;
+    border-style: solid;
+}
+[data-testid="stNotification"][kind="info"] {
+    background-color: rgba(13, 110, 253, 0.1); /* Sfondo leggero blu */
+    border-color: #0d6efd;
+    color: #e0e0e0;
+}
+[data-testid="stNotification"][kind="warning"] {
+    background-color: rgba(253, 126, 20, 0.1); /* Sfondo leggero arancio */
+    border-color: #fd7e14;
+    color: #e0e0e0;
+}
+[data-testid="stNotification"][kind="error"] {
+    background-color: rgba(220, 53, 69, 0.1); /* Sfondo leggero rosso */
+    border-color: #dc3545;
+    color: #e0e0e0;
+}
+[data-testid="stNotification"] a { /* Link dentro le notifiche */
+    color: #0d6efd !important;
+}
+
+/* Container fullscreen for result grid */
+#results_grid_container.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    overflow: auto;
+    background-color: #121212;
+}
